@@ -65,6 +65,11 @@ function back() {
   document.getElementById("inco").innerHTML = "Incorrect digits: " + incorrect
   document.getElementById("skip").innerHTML = "Skipped digits: " + skipped
   score.innerHTML = "Digits: " + digits
+  if(digits >= 8){
+  addi = 1
+} else {
+  addi = 0
+}
 }
 
 window.addEventListener("keydown", mykeydown);
@@ -107,9 +112,3 @@ function mykeydown(e) {
   }
 }
 
-if(digits >= 8){
-  addi = 1
-}
-if(digits <= 8){
-  addi = 0
-}
