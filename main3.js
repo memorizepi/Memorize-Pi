@@ -14,7 +14,7 @@ const pop = document.getElementById("popup")
 const score = document.getElementById("score")
 function func(num) {
   if (arr[digits] == num) {
-    if (digits > 7) {
+    if (digits > 6) {
       divs.removeChild(divs.firstElementChild)
     }
     divs.innerHTML += "<h1 style='font-size:35px' class='green'>" + num + "</h1>"
