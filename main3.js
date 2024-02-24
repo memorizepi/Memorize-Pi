@@ -15,7 +15,7 @@ const pop = document.getElementById("popup")
 const score = document.getElementById("score")
 function func(num) {
   if (arr[digits] == num) {
-    if (digits > 6) {
+    if (digits > 6+addi) {
       divs.removeChild(divs.firstElementChild)
     }
     divs.innerHTML += "<h1 style='font-size:35px' class='green'>" + num + "</h1>"
@@ -28,7 +28,7 @@ function func(num) {
     document.getElementById("corr").innerHTML = "Correct digits: " + correct
     colors.push("green")
   } else {
-    if (digits > 6) {
+    if (digits > 6+addi) {
       divs.removeChild(divs.firstElementChild)
     }
     divs.innerHTML += "<h1 style='font-size:35px' class='red'>" + arr[digits] + "</h1>"
@@ -43,7 +43,7 @@ function func(num) {
   }
 }
 function skip() {
-  if (digits > 6) {
+  if (digits > 6+addi) {
     divs.removeChild(divs.firstElementChild)
   }
   divs.innerHTML += "<h1 style='font-size:35px' class='yellow'>" + arr[digits] + "</h1>"
