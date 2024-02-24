@@ -1,13 +1,15 @@
 #numberPad {
   background-color: rgb(67, 67, 67);
   height: 250px;
-  width: 200px;
+  width: 220px;
   border-radius: 10px;
 
 }
-body{
+
+body {
   background-color: rgb(206, 206, 206);
 }
+
 #numberPad div {
   width: 200px;
   padding-left: 5px;
@@ -30,12 +32,12 @@ body{
 
 #output {
   background-color: rgb(120, 120, 120);
-  width: 175px;
+  width: 195px;
   height: 40px;
   border-radius: 10px;
   padding: 20px;
   padding-right: 5px;
-
+  left: 10000000000000000000000000000000px
 }
 
 .floats {
@@ -63,7 +65,7 @@ button:hover {
 
 #output h1 {
   display: inline;
-  
+
 }
 
 #hnum1 {
@@ -98,7 +100,7 @@ button:hover {
   }
 }
 
-@keyframes no3 {  
+@keyframes no3 {
   0% {
     background-color: rgb(120, 120, 120);
   }
@@ -112,80 +114,230 @@ button:hover {
   }
 }
 
-#popup{
-  
-  position: absolute;
-  top:40%;
-  right: 25%;
-  width: 50%;
-  height: 30%;
+#popup {
+
+  position: fixed;
+  top: 40%;
+  right: 10%;
+  width: 70%;
+  height: 40%;
   text-align: center;
   background-color: white;
   border-radius: 10px;
   border: 5px solid black;
-  box-shadow: 10px 10px
-  50px;
+  box-shadow: 10px 10px 50px;
   padding: 5px;
   display: none;
 }
 
-@keyframes greens{
-  0%{background-color: rgb(120,120,120)}
-  50%{background-color: rgb(10,255,25)}
-  100%{background-color: rgb(120,120,120)}
+@keyframes greens {
+  0% {
+    background-color: rgb(120, 120, 120)
+  }
+
+  50% {
+    background-color: rgb(10, 255, 25)
+  }
+
+  100% {
+    background-color: rgb(120, 120, 120)
+  }
 }
 
-.animd{
+.animd {
   animation: greens;
   animation-duration: 1s;
 }
 
-.lose{
+.lose {
   animation: no;
   animation-duration: 1s;
 }
-.large{
-  
+
+.large {
+
   font-size: 60px;
   background-color: rgb(143, 143, 143);
   width: 350px;
   text-align: center;
   border-radius: 10px;
 }
-#modes{
-  width:250px;
+
+#modes {
+  width: 250px;
   height: 150px;
   background-color: white;
   border-radius: 10px;
   box-shadow: 10px 10px 50px;
 }
-body{
+
+body {
   font-family: monospace, Helvetica, sans-serif;
 }
-#modes button{
+
+#modes button {
   margin-top: auto;
   text-align: center;
 }
-#modes{
+
+#modes {
   margin: 50px;
   padding: 50px
 }
-#memo{
+
+#memo {
   font-size: 50px;
   width: 300px;
   height: 50px;
   border-radius: 10px;
 }
-.gb{
+
+.gb {
   background-color: #96d35f;
   width: 100px;
   height: 50px;
   border-radius: 10px;
   font-size: 15px;
-  border: 0px
+  border: 0px;
+  font-family: monospace
 }
-.relat{
+
+.relat {
   position: relative;
   bottom: 50px;
   margin-right: 500px;
+}
+
+@media screen and (orientation: portrait) {
+  #hornav {
+    display: none
+  }
+
+  .cd {
+    right: 800%
+  }
+}
+
+@media screen and (orientation: landscape) {
+  #vertnav {
+    display: none;
+  }
+
+  .cd {
+    left: 25%
+  }
+}
+
+#hornav li {
+  list-style-type: none;
+  float: left;
+  margin: 20px;
+  height: auto;
+  width: 125px
+}
+
+#hornav li:hover {
+  color: #858585;
+}
+
+#hornav {
+  position: relative;
+  bottom: 30px;
+  background-color: #b0b0b0;
+  width: auto;
+  box-sizing: border-box;
+  border: 5px solid #b0b0b0;
+  margin-top: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  border-radius: 10px;
+  overflow-x: hidden;
+}
+
+#vertnav div {
+  width: auto;
+  height: 30px
+}
+
+#vertnav div:hover {
+  background-color: rgb(186, 186, 186);
+  opacity: 0.6
+}
+
+#vertnav li {
+  font-size: 18px;
+  padding: 0px;
+  margin: 0px;
+}
+
+.bcool {
+  border-bottom: 3px solid #b0b0b0;
+}
+
+#superior {
+  border-bottom: 3px solid #b0b0b0;
+  border-top: 3px solid #b0b0b0
+}
+
+#inferior {
+  border: none
+}
+
+#vertnav {
+  margin-bottom: 50px;
+  margin-top: 0px;
+  border: 3px solid #b0b0b0;
+  border-radius: 10px;
+  background-color: #b1b1b1
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.WIDE {
+  height: 50px;
+  border: none
+}
+
+.wl {
+  height: auto;
+  width: 1px;
+  background-color: black;
+}
+
+li {
+  list-style: none
+}
+
+button {
+  color: black;
+  font-family: monospace
+}
+
+.cd {
+  position: fixed;
+  font-size: 200px;
+  top: 0%;
+  left: 45%;
+  color: #ff0000;
+  display: none;
+}
+
+@keyframes start {
+  0% {
+    opacity: 1
+  }
+
+  100% {
+    transform: scale(0.01);
+    opacity: 0.1;
+    display: none
+  }
+}
+
+.started {
+  animation: start;
+  animation-duration: 1000ms
 }
