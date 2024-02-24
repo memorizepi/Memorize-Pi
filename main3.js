@@ -55,46 +55,15 @@ function skip() {
   colors.push("yellow")
 }
 function back() {
-  if (digits > 8) {
-    const firstChild = arr[digits - 9];
-    console.log("YAYYYY:   " + firstChild)
-    divs.removeChild(divs.lastElementChild)
-    digits--
-    score.innerHTML = "digits: " + digits
-    if (colors[digits] == "green") {
-      correct--
-      document.getElementById("corr").innerHTML = "Correct digits: " + correct
-    } else if (colors[digits] == "red") {
-      incorrect--
-      document.getElementById("inco").innerHTML = "Incorrect digits: " + incorrect
-    } else if (colors[digits] == "yellow") {
-      skipped--
-      document.getElementById("skip").innerHTML = "Skipped digits: " + skipped
-    }
-    colors.pop()
-    if (digits > 7) {
-      var htmls = divs.innerHTML
-      if (firstChild != undefined) {
-        divs.innerHTML = "<h1 style='font-size:35px; position: relative' class='" + colors[digits - 8] + "'>" + firstChild + "</h1>";
-        console.log("child: ", firstChild)
-        divs.innerHTML += htmls
-      }
-      //`<h1 class='${colors[digits - 8]}'>${htmls}</h1>`
-    } else {
-      console.log(wyg)
-    }
-  } else {
-    digits = 0
-
-    divs.innerHTML = ""
-    correct = 0
-    incorrect = 0
-    skipped = 0
-    document.getElementById("corr").innerHTML = "Correct digits: " + correct
-    document.getElementById("inco").innerHTML = "Incorrect digits: " + incorrect
-    document.getElementById("skip").innerHTML = "Skipped digits: " + skipped
-    score.innerHTML = "digits: " + digits
-  }
+  divs.innerHTML = ""
+  digits = 0
+  correct = 0
+  incorrect = 0
+  skipped = 0
+  document.getElementById("corr").innerHTML = "Correct digits: " + correct
+  document.getElementById("inco").innerHTML = "Incorrect digits: " + incorrect
+  document.getElementById("skip").innerHTML = "Skipped digits: " + skipped
+  score.innerHTML = "Digits:" + digits
 }
 
 window.addEventListener("keydown", mykeydown);
