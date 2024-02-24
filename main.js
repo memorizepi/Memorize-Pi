@@ -5,8 +5,6 @@ var wyg = "";
 var lives = 0;
 var time = 0;
 var wayOfLoss = "";
-localStorage.setItem("highscore", 0)
-var highscore = localStorage.getItem("highscore")
 const livess = document.getElementById("lives");
 const divs = document.getElementById("output");
 const pad = document.getElementById("numberPad");
@@ -76,9 +74,6 @@ function popup() {
   active = false
   pop.style.display = "block";
   console.log(arr[score + 1])
-  localStorage.setItem("highscore", score)
-  highscore = localStorage.getItem("highscore")
-  document.getElementById("hscore").innerHTML = "highscore: " + highscore
 }
 
 function disapear() {
