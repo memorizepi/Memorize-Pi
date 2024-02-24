@@ -1,53 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style2.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zen mode</title>
+  <link rel="stylesheet" href="style2.css">
 </head>
+
 <body>
-    <center>
-    <b><h1 class="large">Memorize π</h1>
-    <div id="sl">
+  <center>
+    <b>
+      <h1 class="large">π Memo</h1>
+      <nav id="hornav">
+        <li><a href="index.html">home</a></li>
+        <li><a href="zen.html">zen mode</a></li>
+        <li><a href="arcade.html">arcade mode</a></li>
+        <div class="wl"></div>
+        <li><a href="practice.html">practice mode</a></li>
+        <div class="wl"></div>
+        <hr class="WIDE">
+      </nav>
+      <nav id="vn">
+        <details id="vertnav">
+          <summary style="margin-bottom: 10px; font-size: 25px">modes</summary>
+          <div id="superior">
+            <a href="index.html">
+              <li href="index.html">home</li>
+            </a>
+          </div>
+          <div class="bcool">
+
+            <a href="zen.html">
+              <li>zen mode</li>
+            </a>
+          </div>
+          <div class="bcool">
+
+            <a href="arcade.html">
+              <li>arcade mode</li>
+            </a>
+          </div>
+          <div id="inferior">
+
+            <a href="practice.html">
+              <li>practice mode</li>
+            </a>
+
+          </div>
+        </details>
+      </nav>
+      <p>test how many digits of pi you can remember! you may take as long as you want to answer. Take your time!</p>
+      <br>
+      <p>If you run out of lives, IT'S GAME OVER
+      <div id="sl">
         <h5 id="lives">lives: 3</h5>
         <h5 id="score">score: 0</h5>
-    </div>
-    <div id="output">
+      </div>
 
-    </div>
-    <div id="numberPad">
+      <div id="output">
+
+      </div>
+      <div id="numberPad">
         <div class="row">
-            <button onclick="func('1')">1</button>
-            <button onclick="func('2')">2</button>
-            <button onclick="func('3')">3</button>
+          <button onclick="func('1')">1</button>
+          <button onclick="func('2')">2</button>
+          <button onclick="func('3')">3</button>
         </div>
         <div class="row">
-            <button onclick="func('4')">4</button>
-            <button onclick="func('5')">5</button>
-            <button onclick="func('6')">6</button>
+          <button onclick="func('4')">4</button>
+          <button onclick="func('5')">5</button>
+          <button onclick="func('6')">6</button>
         </div>
         <div class="row">
-            <button onclick="func('7')">7</button>
-            <button onclick="func('8')">8</button>
-            <button onclick="func('9')">9</button>
-        </div> 
-        <div class="row">
-            <div id="useless"></div>
-            <button id="marg" onclick="func('0')">0</button>
-            <button onclick="func('.')">.</button>
+          <button onclick="func('7')">7</button>
+          <button onclick="func('8')">8</button>
+          <button onclick="func('9')">9</button>
         </div>
-    </div>
-    <div id="popup">
-      <center>
-      <h1>You Lose!</h1>
-      <h5 id="spore"></h5>
-      <button onclick="disapear()" class="gb">Try Again</button>
-      <a href="index.html"><button class="gb" class="relat" style="position: relative; bottom: 8.5px; margin-right: 10px;">Back to home screen</button></a>
-      </center>
-    </div>
-    </center>
-    <script src="main2.js"></script>
-    <script src="wth.js"></script>
+        <div class="row">
+          <div id="useless"></div>
+          <button id="marg" onclick="func('0')">0</button>
+          <button onclick="func('.')">.</button>
+        </div>
+      </div>
+      <div id="popup">
+        <center>
+          <h1>You Lose!</h1>
+          <h5 id="spore"></h5>
+          <button onclick="disapear()" class="gb">Try Again</button>
+          <a href="index.html"><button class="gb" class="relat"
+              style="position: relative; bottom: 0px; margin-right: 10px; font-size:10px">Back to home
+              screen</button></a>
+        </center>
+      </div>
+  </center>
+  <script src="main2.js"></script>
+  <script src="wth.js"></script>
 </body>
+
 </html>
