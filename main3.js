@@ -6,6 +6,7 @@ var correct = 0
 var incorrect = 0
 var skipped = 0
 var atleastihavethis = 8
+var addi = 0
 var colors = []
 var lostelems = []
 const divs = document.getElementById("output")
@@ -106,3 +107,9 @@ function mykeydown(e) {
   }
 }
 
+if(digits >= 8){
+  addi = 1
+}
+if(digits <= 8){
+  addi = 0
+}
