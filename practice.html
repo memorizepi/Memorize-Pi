@@ -1,52 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style3.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style3.css">
 </head>
+
 <body>
-    <center>
-        <b><h1 class="large">π Memo</h1>
-        <div id="sl">
-            <h5 id="score">digits: 0</h5>
-            <div id="idk">
-                <button onclick="skip()" style="background-color: rgb(117, 117, 117); width: 100px; height: 50px; border-radius: 10px; border: 0px; margin-left: 30px;">Next Digit</button>
-                <button onclick="back()" style="background-color: rgb(114, 114, 114); width: 100px; height: 50px; border-radius: 10px; border: 0px;">Back</button>
-            </div>
+  <center>
+    <b>
+      <h1 class="large">π Memo</h1>
+      <nav id="hornav">
+        <li><a href="index.html">home</a></li>
+        <li><a href="zen.html">zen mode</a></li>
+        <li><a href="arcade.html">arcade mode</a></li>
+        <div class="wl"></div>
+        <li><a href="practice.html">practice mode</a></li>
+        <div class="wl"></div>
+        <hr class="WIDE">
+      </nav>
+      <nav id="vn">
+        <details id="vertnav">
+          <summary style="margin-bottom: 10px; font-size: 25px">modes</summary>
+          <div id="superior">
+            <a href="index.html">
+              <li href="index.html">home</li>
+            </a>
+          </div>
+          <div class="bcool">
+
+            <a href="zen.html">
+              <li>zen mode</li>
+            </a>
+          </div>
+          <div class="bcool">
+
+            <a href="arcade.html">
+              <li>arcade mode</li>
+            </a>
+          </div>
+          <div id="inferior">
+
+            <a href="practice.html">
+              <li>Practice mode</li>
+            </a>
+
+          </div>
+        </details>
+      </nav>
+      <p>practice your digits! It doesn't matter if you get it wrong, You'll always be able to continue!</p>
+      <br>
+      <div id="sl">
+        <h5 id="score">digits: 0</h5>
+        <div id="idk">
+          <button onclick="skip()"
+            style="background-color: rgb(117, 117, 117); width: 100px; height: 50px; border-radius: 10px; border: 0px; margin-left: 30px; position: relative; left: 60px">Next
+            Digit</button>
+          <div style="display: block">
+            <button onclick="back()"
+              style="background-color: rgb(114, 114, 114); width: 100px; height: 50px; border-radius: 10px; border: 0px;"
+              class="relat">Back</button>
+          </div>
         </div>
-        <div id="output">
-        
+      </div>
+      <div id="output">
+        <div id="innie"></div>
+      </div>
+      <div id="numberPad">
+        <div class="row">
+          <button onclick="func('1')">1</button>
+          <button onclick="func('2')">2</button>
+          <button onclick="func('3')">3</button>
         </div>
-        <div id="numberPad">
-            <div class="row">
-                <button onclick="func('1')">1</button>
-                <button onclick="func('2')">2</button>
-                <button onclick="func('3')">3</button>
-            </div>
-            <div class="row">
-                <button onclick="func('4')">4</button>
-                <button onclick="func('5')">5</button>
-                <button onclick="func('6')">6</button>
-            </div>
-            <div class="row">
-                <button onclick="func('7')">7</button>
-                <button onclick="func('8')">8</button>
-                <button onclick="func('9')">9</button>
-            </div> 
-            <div class="row">
-                <div id="useless"></div>
-                <button id="marg" onclick="func('0')">0</button>
-                <button onclick="func('.')">.</button>
-            </div>
+        <div class="row">
+          <button onclick="func('4')">4</button>
+          <button onclick="func('5')">5</button>
+          <button onclick="func('6')">6</button>
         </div>
-        <div id="specifity">
-            <h3 style="color:rgb(33, 210, 27)" id="corr">Correct digits: 0</h3>
-            <h3 style="color: red;" id="inco">Incorrect digits: 0</h3>
-            <h3 style="color: rgb(255, 247, 0);" id="skip">Skipped digits: 0</h3>
+        <div class="row">
+          <button onclick="func('7')">7</button>
+          <button onclick="func('8')">8</button>
+          <button onclick="func('9')">9</button>
         </div>
-    </center>
-    <script src="main3.js"></script>
+        <div class="row">
+          <div id="useless"></div>
+          <button id="marg" onclick="func('0')">0</button>
+          <button onclick="func('.')">.</button>
+        </div>
+      </div>
+      <div id="specifity">
+        <h3 style="color:rgb(33, 210, 27)" id="corr">Correct digits: 0</h3>
+        <h3 style="color: red;" id="inco">Incorrect digits: 0</h3>
+        <h3 style="color: rgb(255, 247, 0);" id="skip">Skipped digits: 0</h3>
+      </div>
+      <br>
+  </center>
+  <script src="main3.js"></script>
 </body>
+
 </html>
