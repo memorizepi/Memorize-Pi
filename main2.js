@@ -8,58 +8,99 @@ const divs = document.getElementById("output")
 const pad = document.getElementById("numberPad")
 const pop = document.getElementById("popup")
 livess.innerHTML = "lives: " + lives
-function func(num){
-  if(lives > 0){
-    if(arr[score] == num){
-        divs.innerHTML += "<h1 style='font-size:35px'>"+num+"</h1>"
-        score++
-        wyg = wyg + String(num)
-        console.log(wyg.length)
-        if(wyg.length > 9){
-            divs.removeChild(divs.firstElementChild)
-        }
-        document.getElementById("score").innerHTML = "score: "+score
-        if((score == ct20*20) && (lives<3)){
-          lives++
-          ct20++
-          livess.innerHTML = "lives: " + lives
-          divs.classList.add("animd")
-          setTimeout(function(){
-            divs.classList.remove("animd")
-          }, 1000)
-        } else if(score == ct20*20){
-          ct20++
-          livess.innerHTML = "lives: " + lives
-          divs.classList.add("animd")
-          setTimeout(function(){
-            divs.classList.remove("animd")
-          }, 1000)
-        }
-    } else {
-        lives--
+function func(num) {
+  if (lives > 0) {
+    if (arr[score] == num) {
+      divs.innerHTML += "<h1 style='font-size:35px'>" + num + "</h1>"
+      score++
+      wyg = wyg + String(num)
+      console.log(wyg.length)
+      if (wyg.length > 8) {
+        divs.removeChild(divs.firstElementChild)
+      }
+      document.getElementById("score").innerHTML = "score: " + score
+      if ((score == ct20 * 20) && (lives < 3)) {
+        lives++
+        ct20++
         livess.innerHTML = "lives: " + lives
-        divs.classList.add("lose")
-        setTimeout(function(){
-          divs.classList.remove("lose")
+        divs.classList.add("animd")
+        setTimeout(function() {
+          divs.classList.remove("animd")
         }, 1000)
-        if(lives == 0){
-            document.getElementById("spore").innerHTML = "you memorized "+score+" digits of pi"
-            divs.innerHTML = ""
-            score = 0
-            wyg = ""
-            document.getElementById("score").innerHTML = "score: "+ score
-            popup()
-            livess.innerHTML = "lives: "+lives
-        }
+      } else if (score == ct20 * 20) {
+        ct20++
+        livess.innerHTML = "lives: " + lives
+        divs.classList.add("animd")
+        setTimeout(function() {
+          divs.classList.remove("animd")
+        }, 1000)
+      }
+    } else {
+      lives--
+      livess.innerHTML = "lives: " + lives
+      divs.classList.add("lose")
+      setTimeout(function() {
+        divs.classList.remove("lose")
+      }, 1000)
+      if (lives == 0) {
+        document.getElementById("spore").innerHTML = "you memorized " + score + " digits of pi"
+        divs.innerHTML = ""
+        score = 0
+        wyg = ""
+        document.getElementById("score").innerHTML = "score: " + score
+        popup()
+        livess.innerHTML = "lives: " + lives
+      }
     }
   }
 }
-function popup(){
+function popup() {
   pop.style.display = "block"
 }
 
-function disapear(){
+function disapear() {
   pop.style.display = "none"
   lives = 3
-  livess.innerHTML = "lives: "+lives
+  livess.innerHTML = "lives: " + lives
 }
+
+window.addEventListener("keydown", mykeydown);
+
+function mykeydown(e) {
+  keyPressed = e.keyCode; 
+  console.log("key: " + keyPressed);
+  if (keyPressed == "49") {
+    func("1")
+  }
+  if (keyPressed == "50") {
+    func("2")
+  }
+  if (keyPressed == "51") {
+    func("3")
+  }
+  if (keyPressed == "52") {
+    func("4")
+  }
+  if (keyPressed == "53") {
+    func("5")
+  }
+  if (keyPressed == "54") {
+    func("6")
+  }
+  if (keyPressed == "55") {
+    func("7")
+  }
+  if (keyPressed == "56") {
+    func("8")
+  }
+  if (keyPressed == "57") {
+    func("9")
+  }
+  if (keyPressed == "48") {
+    func("0")
+  }
+  if (keyPressed == "190") {
+    func(".")
+  }
+}
+
