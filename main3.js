@@ -87,9 +87,9 @@ function back() {
     digits = 0
 
     divs.innerHTML = ""
+    correct = 0
     incorrect = 0
-    var incorrect = 0
-    var skipped = 0
+    skipped = 0
     document.getElementById("corr").innerHTML = "Correct digits: " + correct
     document.getElementById("inco").innerHTML = "Incorrect digits: " + incorrect
     document.getElementById("skip").innerHTML = "Skipped digits: " + skipped
