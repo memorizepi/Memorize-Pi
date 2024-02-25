@@ -64,7 +64,7 @@ function back() {
   document.getElementById("corr").innerHTML = "Correct digits: " + correct
   document.getElementById("inco").innerHTML = "Incorrect digits: " + incorrect
   document.getElementById("skip").innerHTML = "Skipped digits: " + skipped
-  score.innerHTML = "Digits: " + digits
+  score.innerHTML = "digits: " + digits
   if(digits >= 8){
   addi = 1
 } else {
