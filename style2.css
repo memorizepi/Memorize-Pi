@@ -227,13 +227,13 @@ details li {
   list-style-type: none
 }
 
-@media screen and (orientation: portrait) {
+@media (max-width:767px) {
   #hornav {
     display: none
   }
 }
 
-@media screen and (orientation: landscape) {
+@media (min-width:768px) {
   #vertnav {
     display: none;
   }

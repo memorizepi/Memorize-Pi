@@ -208,9 +208,13 @@ body {
   margin-right: 500px;
 }
 
-@media screen and (orientation: portrait) {
+@media (max-width:767px) {
   #hornav {
     display: none
+  }
+
+  #vertnav {
+    display: block
   }
 
   .cd {
@@ -218,9 +222,13 @@ body {
   }
 }
 
-@media screen and (orientation: landscape) {
+@media (min-width:768px) {
   #vertnav {
     display: none;
+  }
+
+  #hornav {
+    display: block
   }
 
   .cd {

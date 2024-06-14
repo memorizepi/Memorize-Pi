@@ -1,7 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <!-- Google tag (gtag.js) -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arcade Mode</title>
+  <link rel="stylesheet" href="style.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2766173875920542"
+     crossorigin="anonymous"></script>
+  <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-99RK5C60HD"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -10,35 +17,110 @@
 
   gtag('config', 'G-99RK5C60HD');
 </script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MemorizePi or PiMemo - the way to know the digits</title>
-    <link rel="stylesheet" href="style.css">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2766173875920542"
-     crossorigin="anonymous"></script>
-    <meta name="google-adsense-account" content="ca-pub-7475105458249496">
 </head>
-<body>
-    <center>
-    <h1 id="memo">π Memo</h1>
-    <div id="modes">
-        <h5 align="center">Select Mode:</h5>
-        <div style="display: inline;">
-            <a href="zen.html"><button class="gb">Zen Mode</button></a>
-            <a href="arcade.html"><button style="position: relative; bottom: 8.5px; margin: 10px;" class="gb"> Arcade Mode</button></a>
-            <a href="practice.html"><button style="position: relative; bottom: 8.5px; margin-right: 10px;" class="gb"> Practice Mode</button></a>
+
+<body id="wut">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2766173875920542"
+     crossorigin="anonymous"></script>
+<!-- Ads for pi -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-2766173875920542"
+     data-ad-slot="5021794135"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+  <center>
+    <b>
+      <h1 class="large">Memorize π</h1>
+      <nav id="hornav">
+        <li><a href="arcade.html">arcade mode</a></li>
+        <li><a href="zen.html">zen mode</a></li>
+        <div class="wl"></div>
+        <li><a href="practice.html">practice mode</a></li>
+        <div class="wl"></div>
+        <hr class="WIDE">
+      </nav>
+      <nav id="vn">
+        <details id="vertnav">
+          <summary style="margin-bottom: 10px; font-size: 25px">modes</summary>
+          <div id="superior">
+            <a href="index.html">
+              <li>arcade mode</li>
+            </a>
+          </div>
+          <div class="bcool">
+
+            <a href="zen.html">
+              <li>zen mode</li>
+            </a>
+          </div>
+          <div id="inferior">
+
+            <a href="practice.html">
+              <li>practice mode</li>
+            </a>
+
+          </div>
+        </details>
+      </nav>
+      <p>test how many digits of pi you can remember within a strict timeframe!</p><br>
+      <p>you need to answer 20 digits in 20 seconds in order to be able to continue. If you run out of time or lives,
+        IT'S GAME OVER</p><hr>
+      <button class="gb" style="margin: 10px" onclick="disapear()">Start</button>
+      <div id="sl">
+        <h5 id="lives">lives: 3</h5>
+        <h5 id="score">score: 0</h5>
+      </div>
+      <div id="output">
+
+      </div>
+      <div id="numberPad">
+        <div class="row">
+          <button onclick="func('1')">1</button>
+          <button onclick="func('2')">2</button>
+          <button onclick="func('3')">3</button>
         </div>
-    </div>
-    </center>
-    <script type="text/javascript">
+        <div class="row">
+          <button onclick="func('4')">4</button>
+          <button onclick="func('5')">5</button>
+          <button onclick="func('6')">6</button>
+        </div>
+        <div class="row">
+          <button onclick="func('7')">7</button>
+          <button onclick="func('8')">8</button>
+          <button onclick="func('9')">9</button>
+        </div>
+        <div class="row">
+          <div id="useless"></div>
+          <button id="marg" onclick="func('0')">0</button>
+          <button onclick="func('.')">.</button>
+        </div>
+      </div>
+      <div id="popup">
+        <center>
+          <h1>You Lose!</h1>
+          <h5 id="spore"></h5>
+          <h5 id="next"></h5>
+          <button onclick="disapear()" class="gb">Try Again</button>
+        </center>
+      </div>
+      <h1 id="time">Time: </h1>
+  </center>
+  <div>
+  <h1 class="cd" id="a1">3</h1>
+  <h1 class="cd" id="a2">2</h1>
+  <h1 class="cd" id="a3">1</h1>
+  <h1 class="cd" id="a4">GO</h1>
+  </div>
+  <script type="text/javascript">
 var infolinks_pid = 3415375;
 var infolinks_wsid = 0;
 </script>
 <script type="text/javascript" src="http://resources.infolinks.com/js/infolinks_main.js"></script>
-<script type="text/javascript">
-var infolinks_pid = 3415375;
-var infolinks_wsid = 0;
-</script>
-<script type="text/javascript" src="http://resources.infolinks.com/js/infolinks_main.js"></script>
+<script src="main.js"></script>
 </body>
+
 </html>
